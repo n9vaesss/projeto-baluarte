@@ -1,0 +1,46 @@
+/* From Uiverse.io by adamgiebl */
+.button-fale-conosco {
+  letter-spacing: 2px;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  border: 3px solid #db551e;
+  border-radius: 12px;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+  background-color: #db551e;
+}
+
+.button-fale-conosco:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: white;
+  z-index: -1;
+}
+
+.button-fale-conosco:hover,
+.button-fale-conosco:focus {
+  color: #db551e;
+}
+
+.button-fale-conosco:hover:before,
+.button-fale-conosco:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.button-fale-conosco:active {
+  transform: scale(0.9);
+}

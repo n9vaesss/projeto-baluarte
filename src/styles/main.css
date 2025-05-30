@@ -1,0 +1,43 @@
+body {
+  font-family: "Inter";
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.main-background-color {
+  background-color: #f7f7f7;
+}
+.bg-main-orange {
+  background-color: #db551e;
+}
+.bg-main-blue {
+  background-color: rgba(82, 94, 224, 0.95);
+}
+
+.text-color-background-white-title {
+  color: #45454e;
+}
+
+.text-color-background-white-base {
+  color: #686872;
+}
+
+.text-color-background-blue-title {
+  color: #ffffff;
+}
+
+.text-color-background-blue-base {
+  color: #dcdff9;
+}
+
+.text-color-orange {
+  color: #db551e;
+}
+
+.text-color-blue {
+  color: #525fe1;
+}
+
+.box-shadow {
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+}

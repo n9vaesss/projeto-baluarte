@@ -1,0 +1,10 @@
+/* CSS HEX */
+--azul-padrao: #525FE1;
+--laranja-padrao: #db551e;
+--main-background: #F7F7F7;
+--swiss-coffee: #d7cbce;
+--bali-hai: #8990b2;
+
+
+
+
