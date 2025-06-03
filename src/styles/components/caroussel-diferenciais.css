@@ -1,0 +1,113 @@
+@layer base, demo;
+@import url(https://fonts.bunny.net/css?family=abel:400);
+
+@layer demo {
+  .carousel {
+    --items: 5;
+    --carousel-duration: 40s;
+    @media (width > 600px) {
+      --carousel-duration: 30s;
+    }
+    --carousel-width: min(
+      80vw,
+      1200px
+    ); /* note - it will "break" if it gets too wide and there aren't enough items */
+    --carousel-item-width: 290px;
+    --carousel-item-height: 430px;
+    --carousel-item-gap: 2rem;
+
+    position: relative;
+    width: var(--carousel-width);
+    height: var(--carousel-item-height);
+    overflow: clip;
+
+    &[mask] {
+      /* fade out on sides */
+      mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10% 90%,
+        transparent
+      );
+    }
+
+    &[reverse] > article {
+      animation-direction: reverse;
+    }
+    &:hover > article {
+      animation-play-state: paused;
+    }
+  }
+  .carousel > article {
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    left: calc(100% + var(--carousel-item-gap));
+    width: var(--carousel-item-width);
+    height: calc(var(--carousel-item-height) - 50px);
+    display: grid;
+    grid-template-rows: 200px auto 1fr auto;
+
+    /* animation */
+    will-change: transform;
+    animation-name: marquee;
+    animation-duration: var(--carousel-duration);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: calc(
+      var(--carousel-duration) / var(--items) * 1 * var(--i) * -1
+    );
+    &:nth-child(1) {
+      --i: 0;
+    }
+    &:nth-child(2) {
+      --i: 1;
+    }
+    &:nth-child(3) {
+      --i: 2;
+    }
+    &:nth-child(4) {
+      --i: 3;
+    }
+    &:nth-child(5) {
+      --i: 4;
+    }
+    &:nth-child(6) {
+      --i: 5;
+    }
+    &:nth-child(7) {
+      --i: 6;
+    }
+    &:nth-child(8) {
+      --i: 7;
+    }
+  }
+
+  @keyframes marquee {
+    100% {
+      transform: translateX(
+        calc(
+          (
+              var(--items) *
+                (var(--carousel-item-width) + var(--carousel-item-gap))
+            ) * -1
+        )
+      );
+    }
+  }
+}
+
+/* general styling */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  :root {
+    color-scheme: light dark;
+
+    --bg-dark: rgb(2, 6, 24);
+    --bg-light: rgb(229, 229, 229);
+    --txt-light: rgb(10, 10, 10);
+    --txt-dark: rgb(245, 245, 245);
+  }
+}
