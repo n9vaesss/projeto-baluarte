@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+.caroussel-diferenciais-article-div {
+  @apply flex flex-col pt-8 px-4 h-full;
+}
+
+.caroussel-diferenciais-article-h3 {
+  @apply text-left font-extrabold text-xl;
+}
+
+.caroussel-diferenciais-article-span {
+  @apply text-left text-base my-auto;
+}
+
+.caroussel-diferenciais-article-button {
+  @apply text-left pb-4 px-4 w-full text-base;
+}
