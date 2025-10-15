@@ -33,3 +33,14 @@
   transition-duration: 400ms;
   transition-property: width, left;
 }
+
+
+@media (max-width: 1280px) {
+  .button-underline {
+    color: #db551e; 
+    border: #db551e 3px solid;
+    border-radius: 8px;
+    padding: 5px 10px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+  }
+}

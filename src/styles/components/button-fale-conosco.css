@@ -44,3 +44,11 @@
 .button-fale-conosco:active {
   transform: scale(0.9);
 }
+
+
+@media (max-width: 1280px) {
+  .button-fale-conosco{
+    display: none;
+  }
+}
+

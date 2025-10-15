@@ -2,18 +2,18 @@
 @import url(https://fonts.bunny.net/css?family=abel:400);
 
 @layer demo {
-  .carousel-diferenciais {
+  .carousel-estrutura-responsive {
     --items: 5;
-    --carousel-duration: 60s;
+    --carousel-duration: 40s;
     @media (width > 600px) {
       --carousel-duration: 30s;
     }
     --carousel-width: min(
-      90vw,
+      100vw,
       100%
-    ); /* note - it will "break" if it gets too wide and there aren't enough items */
-    --carousel-item-width: 290px;
-    --carousel-item-height: 430px;
+    ); 
+    --carousel-item-width: 100%;
+    --carousel-item-height: 300px;
     --carousel-item-gap: 2rem;
 
     position: relative;
@@ -22,7 +22,6 @@
     overflow: clip;
 
     &[mask] {
-      /* fade out on sides */
       mask-image: linear-gradient(
         to right,
         transparent,
@@ -38,17 +37,14 @@
       animation-play-state: paused;
     }
   }
-  .carousel-diferenciais > article {
-    padding: 25px;
+  .carousel-estrutura-responsive > article {
+    margin-top: 19px;
     position: absolute;
     top: 0;
     left: calc(100% + var(--carousel-item-gap));
     width: var(--carousel-item-width);
-    height: calc(var(--carousel-item-height) - 50px);
     display: grid;
-    grid-template-rows: 200px auto 1fr auto;
-
-    /* animation */
+    
     will-change: transform;
     animation-name: marquee;
     animation-duration: var(--carousel-duration);
@@ -113,29 +109,40 @@
 }
 
 
-
 @media (max-width: 768px) {
-  .carousel-diferenciais {
+  .carousel-estrutura-responsive {
     animation: none;
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem;
-    mask-image: none; /* remove fade */
+    mask-image: none;
   }
 
-  .carousel-diferenciais::-webkit-scrollbar {
-    display: none; /* opcional: oculta a barra de rolagem */
+  .carousel-estrutura-responsive::-webkit-scrollbar {
+    display: none;
   }
 
-  .carousel-diferenciais > article {
+  .carousel-estrutura-responsive > article {
     position: relative;
     animation: none;
     flex: 0 0 auto;
-    width: 280px;
-    scroll-snap-align: start;
+    width: 90vw; 
+    scroll-snap-align: center; 
     left: unset;
+    display: flex;
+    justify-content: center;
+  }
+
+  .foto, .card, .image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card {
+    max-width: 90vw;
+    height: auto;
   }
 }

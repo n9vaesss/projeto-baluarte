@@ -15,3 +15,23 @@
 .caroussel-diferenciais-article-button {
   @apply text-left pb-4 px-4 w-full text-base;
 }
+
+.icones-estrutura {
+  @apply w-16 h-16 absolute opacity-50;
+}
+
+.inputs-form {
+  @apply border border-gray-300 rounded-lg resize-none text-xl font-medium p-3;
+}
+
+.inputs-form:focus {
+  @apply outline-none border-[#db551e] ring-1 ring-[#db551e];
+}
+
+.span-form {
+  @apply text-xl font-semibold pb-2;
+}
+
+.icons-form{
+  @apply ease-in-out transition duration-300;
+}
