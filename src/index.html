@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="https://i.postimg.cc/cLhgv8GT/icone-baluarte.png" type="image/png" /> 
     <title>Colégio Baluarte</title>
-    <link href="../styles/output.css" rel="stylesheet" />
-    <link href="../styles/main.css" rel="stylesheet" />
+    <link href="./styles/output.css" rel="stylesheet" />
+    <link href="./styles/main.css" rel="stylesheet" />
     <link
-      href="../styles/components/button-fale-conosco.css"
+      href="./styles/components/button-fale-conosco.css"
       rel="stylesheet"
     />
-    <link href="../styles/components/button-underline.css" rel="stylesheet" />
-    <link href="../styles/components/card-diferenciais.css" rel="stylesheet" />
+    <link href="./styles/components/button-underline.css" rel="stylesheet" />
+    <link href="./styles/components/card-diferenciais.css" rel="stylesheet" />
     <link
-      href="../styles/components/caroussel-diferenciais.css"
+      href="./styles/components/caroussel-diferenciais.css"
       rel="stylesheet"
     />
         <link
-      href="../styles/components/moldura.css"
+      href="./styles/components/moldura.css"
       rel="stylesheet"
     />
-    <link href="../styles/components/caroussel-metodologia.css" rel="stylesheet" />
-    <link href="../styles/components/caroussel-estrutura-responsive.css" rel="stylesheet" />
+    <link href="./styles/components/caroussel-metodologia.css" rel="stylesheet" />
+    <link href="./styles/components/caroussel-estrutura-responsive.css" rel="stylesheet" />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
@@ -79,20 +79,20 @@
           preparando os alunos para um futuro globalizado.
         </p>
 
-        <div class="pb-8 flex items-center lg:pb-0">
+        <div class="pb-8 flex items-center lg:pb-0 ">
           <button
             class="button-fale-conosco text-lg py-2 px-4 cursor-pointer box-shadow md:text-xl "
           >
             <a href="#fale-conosco">Fale Conosco</a>
           </button>
-
           <a
-            href="#"
-            class="cursor-pointer flex items-center pl-5 scale-100 hover:scale-105 transition duration-500 ease-in-out md:pl-10"
+            href="https://www.youtube.com/watch?v=4gmO8hSbIsM"
+            target="_blank"
+            class="cursor-pointer flex items-center pl-0 xl:pl-10 scale-100 hover:scale-105 transition duration-500 ease-in-out"
           >
             <img
               src="https://i.postimg.cc/XvjcrbGZ/play-button.png"
-              alt="Botao de play"
+              alt="Botão de play"
               class="max-w-10 md:max-w-12"
             />
             <span
@@ -411,7 +411,7 @@
         <div class="w-[min(90vw,100%)] max-w-7xl pb-14 flex justify-around flex-col-reverse items-center gap-4 lg:flex-row ">
           <iframe 
             class="rounded-xl box-shadow w-full h-[300px] sm:w-[560px] sm:h-[315px]"
-            src="https://www.youtube.com/embed/Ree4202ov6Y?&autoplay=1&mute=1&loop=1"
+            src="https://www.youtube.com/embed/4gmO8hSbIsM?&autoplay=1&mute=1&loop=1"
             title="Abertura da novela Carrossel - SBT - 2012" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -657,14 +657,14 @@
         </div>
         <div class="flex-1/2 py-11 h-full flex items-center justify-center lg:pt-0">
           <div class="bg-white rounded-2xl p-11 text-color-background-white-title w-full 2xl:w-[600px]">
-              <form>
+              <form id="contactForm">
                 <div class="flex flex-col">
                   <span class="span-form text-color-background-white-base">Nome</span>
-                  <input class="inputs-form inputs-form:focus" type="text" placeholder="Digite o seu nome (obrigatório)" required>
+                  <input class="inputs-form inputs-form:focus" type="text" placeholder="Digite o seu nome (obrigatório)" id="name" name="name" required >
                 </div>
                 <div class="flex flex-col py-5">
                   <span class="span-form text-color-background-white-base">Email</span>
-                  <input class="inputs-form inputs-form:focus" type="email" placeholder="Digite o seu email (obrigatório)" required>
+                  <input class="inputs-form inputs-form:focus" type="email" placeholder="Digite o seu email (obrigatório)" id="email" name="email" required >
                 </div>
                 <div class="flex flex-col">
                   <span class="span-form text-color-background-white-base">Celular</span>
@@ -676,6 +676,7 @@
                     placeholder="Digite o seu numero de celular (obrigatório)"
                     maxlength="16"
                     pattern="^\(\d{2}\) 9 \d{4}-\d{4}$"
+                    name="phone"
                     required
                   >
                 </div>
@@ -684,10 +685,12 @@
                   <textarea
                     class="h-40 inputs-form inputs-form:focus"
                     placeholder="Digite o sua mensagem (opcional)"
+                    id="message" name="message"
                   ></textarea>
                 </div>
                 <button
                   class="button-fale-conosco text-xl py-2 px-14 cursor-pointer box-shadow flex-important"
+                  type="submit"
                 >
                   Enviar
                 </button>
@@ -703,20 +706,53 @@
       </div>
     </div>
 
-    <a
-      href="https://wa.me/seunumerodetelefone"
-      target="_blank"
-      class="fixed z-50 bottom-10 right-10 bg-green-500 p-4 rounded-full shadow-lg shadow-green-500/50 hover:scale-110 hover:shadow-green-400 transition-transform duration-300 animate-pulse"
-    >
-      <img src="https://i.postimg.cc/63zfF0MW/Whats-App-svg.png" alt="WhatsApp" class="w-14 h-14" />
-      <span class="absolute top-2 right-2 w-3.5 h-3.5 bg-red-500 rounded-full animate-ping"></span>
-      <span class="absolute top-2 right-2 w-3.5 h-3.5 bg-red-500 rounded-full"></span>
-    </a>
+    <div class="fixed bottom-10 right-10 z-50">
+      <button
+        id="whatsappButton"
+        class="bg-green-500 p-4 rounded-full shadow-lg shadow-green-500/50 hover:scale-110 transition-transform duration-300 relative cursor-pointer"
+      >
+        <img src="https://i.postimg.cc/63zfF0MW/Whats-App-svg.png" alt="WhatsApp" class="w-12 h-12" />
+        <span class="absolute top-2 right-2 w-3.5 h-3.5 bg-red-500 rounded-full animate-ping"></span>
+        <span class="absolute top-2 right-2 w-3.5 h-3.5 bg-red-500 rounded-full"></span>
+      </button>
+
+      <div
+        id="whatsappChat"
+        class="hidden absolute bottom-24 right-0 bg-white border border-gray-300 shadow-lg rounded-2xl w-64 p-4"
+      >
+        <p class="font-semibold text-gray-800 mb-2">💬 Fale conosco!</p>
+
+        <button
+          onclick="sendWhatsAppMessage('Olá! Gostaria de saber mais sobre as matrículas.')"
+          class="block w-full text-left bg-gray-100 hover:bg-green-100 text-gray-700 px-3 py-2 rounded-lg mb-2 transition"
+        >
+          🧑‍🎓 Saber sobre matrículas
+        </button>
+
+        <button
+          onclick="sendWhatsAppMessage('Olá! Quais são os valores das mensalidades?')"
+          class="block w-full text-left bg-gray-100 hover:bg-green-100 text-gray-700 px-3 py-2 rounded-lg mb-2 transition"
+        >
+          💰 Valores das mensalidades
+        </button>
+
+        <button
+          onclick="sendWhatsAppMessage('Oi! Tenho dúvidas sobre o colégio.')"
+          class="block w-full text-left bg-gray-100 hover:bg-green-100 text-gray-700 px-3 py-2 rounded-lg transition"
+        >
+          🤔 Tenho dúvidas
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../js/aos.js"></script>
-    <script src="../js/phone-mask.js"></script>
-    <script src="../js/swiper.js"></script>
-    <script src="../js/modal-diferenciais.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/phone-mask.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/modal-diferenciais.js"></script>
+    <script src="./js/whatsapp.js"></script>
+    <script src="./js/email.js"></script>
   </body>
 </html>
